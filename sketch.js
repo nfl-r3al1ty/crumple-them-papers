@@ -18,7 +18,7 @@ function setup() {
 
 	//Create the Bodies Here.
 ground = new Ground(400, 680, 800, 20);
-ball = new Ball(100, 650, 20);
+ball = new Ball(100, 650, 35);
 dustbin = new Dustbin(650, 660);
 	Engine.run(engine);
   
@@ -27,7 +27,7 @@ dustbin = new Dustbin(650, 660);
 
 function draw() {
 
-  background(0);
+  background(245);
   
 
 
@@ -38,7 +38,7 @@ ball.display();
 
 function keyPressed(){
 	if (keyCode === 32){
-		Matter.Body.applyForce(ball.body, ball.body.position, {x: 45, y: -60});
+		Matter.Body.applyForce(ball.body, ball.body.position, {x: 35, y: -45});
 	}
 }
 
